@@ -55,6 +55,14 @@
         0.5vh;
     }
 
+.sale-img-back{
+    position:absolute;
+    max-width: 30%;
+    top:-3px;
+    left:5px;
+}
+
+
     body,
     html {
         height: 100%;

@@ -36,7 +36,7 @@
    
     <div  class="main-content">
        
-       <a href="/Lohbdingmachine/index.html"><img class="pay-img-back" src="img/sale/App_Skincare_backbutton.png" alt=""></a>
+       <a href="/Lohbdingmachine/index.html"><img class="sale-img-back" src="img/sale/App_Skincare_backbutton.png" alt=""></a>
             <div class="mt-4 text-center">
                <p id="category-title" class="pay-img-title custom-font99" style="margin: 0;"></p>
             </div>
@@ -1299,6 +1299,9 @@
                 var val_price=$('#product-total-price').text();
                 $(".costAll").text(val_price);
               
+            });
+            $('.sale-img-back').click(function() {
+                window.history.back();
             });
 
              $('.product-0').click(function(e) {
