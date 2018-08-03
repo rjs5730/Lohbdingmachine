@@ -1,0 +1,87 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            //비동기 통신을 하여 json타입으로 호출한다.
+            $.ajax({
+                type: 'get',
+                url: 'http://13.125.122.177:8080/lobdingmachine/app/product/getByCategoryIdx?categoryIdx=1',
+                dataType: 'json',
+                success: function(data) {
+                    var length = Object.keys(data).length;
+                    var text = "";
+                    //div태그에 html로 출력!!
+                    $("#listLayout").html(data.name + length);
+                    for (var i = 0; i < length; i++) {
+                       text = text + "<p>안녕<p>";
+                    }
+                    $("#listLayout").html(text);
+                }
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+
+
+    <c:foreach var="cnt" begin="1" end="10">
+        ${cnt}
+    </c:foreach>
+
+
+
+    <select id="resultSelect">
+		<option value="Y">성공JSON</option>
+		<option value="N">실패JSON</option>
+	</select>
+    <input type="button" id="searchButton" value="조회" />
+    <br />
+    <p id="listLayout"></p>
+    <div id="listLayout0">
+        설명 : <span id="text0"></span>
+        <img src="">
+    </div>
+    <div id="listLayout1">
+        설명 : <span id="text0"></span>
+        <img src="">
+    </div>
+
+
+    <div id="listLayout2">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout3">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout4">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout5">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout6">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout7">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout8">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+    <div id="listLayout9">
+        설명 : <span id="text0"></span>
+        <img src=""></div>
+
+
+
+</body>
+</html>
+

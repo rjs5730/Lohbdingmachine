@@ -1,0 +1,163 @@
+    @font-face {
+        font-family: HGfont20;
+        src: url('font/HGGGothicssi_Pro_20g.otf') format('otf');
+
+    }
+
+
+    < !-- font local-- > .custom-font00 {
+        font-family: 'HG꼬딕씨_Pro 00g';
+    }
+
+    .custom-font20 {
+        font-family: 'HG꼬딕씨_Pro 20g';
+    }
+
+    .custom-font40 {
+        font-family: 'HG꼬딕씨_Pro 40g';
+    }
+
+    .custom-font60 {
+        font-family: 'HG꼬딕씨_Pro 60g';
+    }
+
+    .custom-font80 {
+        font-family: 'HG꼬딕씨_Pro 80g';
+    }
+
+    .custom-font99 {
+        font-family: 'HG꼬딕씨_Pro 99g';
+    }
+
+
+    < !-- ////////////////////////// -->       
+    .main-content {
+        height: 100vh;
+    }
+
+    @media (min-width:500px) {
+        .jjj {
+            min-height: 70vh;
+            height: 70vh;
+
+        }
+    }
+
+    @media (min-width:500px) {
+        .main-cart {
+            height: 20vh;
+        }
+    }
+
+    .cart-item {
+        width: 10vh;
+        margin: 0.3vh;
+        0.5vh;
+    }
+
+    body,
+    html {
+        height: 100%;
+        font-weight: 400;
+        margin;
+        0;
+        font-family: 'HG꼬딕씨_Pro 60g';
+    }
+
+    .bg {
+        /* The image used */
+        background-image: url("App_02_back.png");
+        background-attachment: fixed;
+        /* Center and scale the image nicely */
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .back-button {
+        position: absolute;
+        left: 50px;
+        top: 20px;
+    }
+
+    .bg-red {
+        background-color: #E94709 !important;
+        border-radius: 3rem;
+    }
+
+    .btn-round {
+        background-color: #ffffff;
+        border: none;
+        color: #ea4609;
+        padding: 10px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+    }
+
+    .font-3rem {
+        font-size: 3rem;
+    }
+
+    hr {
+        display: ;
+        height: 1px;
+        border: 0;
+        border-top: 2px solid #fff;
+        margin: 1em 0;
+        padding: -0;
+    }
+
+
+    .cart-bg {
+        background: #FDF0EC
+    }
+
+    < !-- ///////    제품 csss   //////////////// -->
+    .product {
+        padding: 2rem;
+    }
+
+    .product .item {
+        position: relative;
+    }
+
+    .product .price-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        top: -70px;
+    }
+
+    .product .btn-round {
+        background-color: #ea4609;
+        border: white;
+        border-bottom-width: 10px;
+        color: white;
+        margin: auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 35px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+    }
+
+    .product .title {
+        position: relative;
+        top: -40px;
+    }
+
+    .product .description {
+        position: relative;
+        top: -40px
+    }
+
+    .col-4 {
+        padding: 0;
+    }

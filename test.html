@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+   
+   
+   <div class="btn btn-primary" id="btn-1">asdf
+       <div type="text" id="category" name="category" value="daf">asdf</div>
+        
+<!--
+       <input type="text" id="email" name="email" value="asdfa"/> 
+       <input type="text" id="age" name="age" value="asdfs"/>
+-->
+<!--       <div id="btn-1" class="btn btn-primary">button</div>-->
+   </div>
+   
+    
+     <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+
+    <script>
+        
+
+    $(document).ready(function(){
+        
+        var product_data;
+        var num=0;
+        $.ajax({
+            type : "GET",
+            url : "http://13.125.122.177:8080/lobdingmachine/app/product/getByCategoryIdx",
+            dataType : "json",
+            error : function(){
+                alert('통신실패!!');
+            },
+            data: {
+                "categoryIdx":"1"
+            },
+            success : function(data){
+                //alert("통신데이터 값 : " + JSON.stringify(data)) ;
+                //console.log(data);
+                $('#test').text(JSON.stringify(data[0]));
+                //$("#dataArea").html(data) ;
+                
+                product_data=data;
+                
+                $('#btn-1').val(data[num]) ;
+            }
+
+        });
+        
+        
+        $('#btn-1').click(function() {
+            console.log(product_data[0]);
+            
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <style>
+        @font-face{
+            font-family : 'CustomFont00';
+            src : url("Font/HGGGothicssi_Pro_00g.otf");
+            
+            font-family : 'CustomFont20';
+            src : url("Font/HGGGothicssi_Pro_20g.otf");
+            font-family : 'CustomFont40';
+            src : url("Font/HGGGothicssi_Pro_40g.otf");
+            font-family : 'CustomFont60';
+            src : url("Font/HGGGothicssi_Pro_60g.otf");
+            font-family : 'CustomFont80';
+            src : url("Font/HGGGothicssi_Pro_80g.otf");
+            font-family : 'CustomFont99';
+            src : url("Font/HGGGothicssi_Pro_99g.otf");
+        }
+  
+        .custom-font00{
+            font-family: 'HG꼬딕씨_Pro 00g';
+        }
+        
+        .custom-font20{
+            font-family: 'HG꼬딕씨_Pro 20g';
+        }
+        
+        .custom-font40{
+            font-family: 'HG꼬딕씨_Pro 40g';
+        }
+        
+        .custom-font60{
+            font-family: 'HG꼬딕씨_Pro 60g';
+        }
+        
+        .custom-font80{
+            font-family: 'HG꼬딕씨_Pro 80g';
+        }
+        
+        .custom-font99{
+            font-family: 'HG꼬딕씨_Pro 99g';
+        }
+        
+        
+ <!-- ////////////////////////// -->       
+        
+        .main-content{
+                height: 60vh;
+        }
+        @media (min-width:500px){
+                .jjj{
+                 min-height: 60vh;
+                height: 60vh;
+                overflow-y: scroll;
+                overflow: auto;
+            }  
+        }
+        @media (min-width:500px){
+            .main-cart{
+                height: 20vh;
+            }
+        }
+        .cart-item{
+            width: 10vh;
+            margin : 0.3vh; 0.5vh;
+        }
+        body, html {
+            height: 100%;
+            margin; 0;
+            font-family: 'HG꼬딕씨_Pro 20g';
+        }
+        .bg{
+        
+            /* The image used */
+            background-image: url("App_02_back.png");
+            background-attachment: fixed;
+            /* Center and scale the image nicely */
+           background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .back-button{
+            position: absolute;
+            left: 50px;
+            top : 20px;
+        }
+        .bg-red {
+            background-color: #E94709 !important;
+            border-radius: 3rem;
+        }
+        .btn-round {
+            background-color: #ffffff;
+            border: none;
+            color: #ea4609;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10rem !important;
+        }
+        .font-3rem{
+            font-size: 3rem;
+        }
+        
+        hr {
+            display: 
+                
+                ;
+            height: 1px;
+            border: 0;
+            border-top: 2px solid #fff;
+            margin: 1em 0;
+            padding: -0; 
+        }
+        
+        
+        .cart-bg{
+            background: #FDF0EC
+        }
+        
+        <!--  ///////    제품 csss   //////////////// -->
+              .product {
+    
+       }
+       .product .item {
+        
+       }
+        .product .price-label {
+           position: relative;
+            display: flex;
+            align-items: center;
+           top:-70px;
+       }
+
+       
+       .product .btn-round2 {
+        background-color: #ea4609;
+        border: white;
+        border-bottom-width: 10px;
+        color: white;
+           
+        margin:auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 2px 30px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+        font-family: 'HG꼬딕씨_Pro 40g';
+        }
+        
+        
+        .product .btn-round {
+        background-color: #ea4609;
+        border: white;
+        border-bottom-width: 10px;
+        color: white;
+        margin:auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 35px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+        }
+
+       
+       .product .title {
+          position: relative;
+           font-size: 13px;
+           font-family: 'HG꼬딕씨_Pro 60g';
+            top : -30px;
+           color: dimgrey;
+       }
+       
+       .product .description {
+          position: relative;
+           font-size: 13px;
+           font-family: 'HG꼬딕씨_Pro 40g';
+        top : -35px;
+                color: dimgrey;
+       }
+        .product-item{
+       
+        }
+        
+    </style>
+  </head>
+
+  <body id="page-top" class = "bg">
+<div class="main-content">
+    <div class="main-body">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-collapse" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+        <!-- <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Back Button -->    
+    <a class="back-button" href="main.html"><img src="img/App_02_backbutton.png" width="50%"></a>
+        
+        
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio" style="padding: 1rem;">
+      <div class="container">
+        <br>
+        
+        <div class="row jjj product">
+       
+          <div class="product-item" style="width: 33%;" >
+             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="img/App_Re_01.png" alt=""> 
+                        <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+                        <h5 class="text-center title ">[마시쪄]</h5>
+                        <p class="text-center description ">이건말이여</p>
+            </a>
+            </div>
+             <div class="product-item" style="width: 33%;" >
+             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="img/App_Re_01.png" alt=""> 
+                        <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+                        <h5 class="text-center title ">[마시쪄]</h5>
+                        <p class="text-center description ">이건말이여</p>
+            </a>
+            </div>
+             <div class="product-item" style="width: 33%;" >
+             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="img/App_Re_01.png" alt=""> 
+                        <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+                        <h5 class="text-center title ">[마시쪄]</h5>
+                        <p class="text-center description ">이건말이여</p>
+            </a>
+            </div>
+            
+             <div class="col-4 product-item">
+             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="img/App_Re_01.png" alt=""> 
+                        <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+                        <h5 class="text-center title ">[마시쪄]</h5>
+                        <p class="text-center description ">이건말이여</p>
+            </a>
+          </div>
+             <div class="col-4 product-item">
+             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="img/App_Re_01.png" alt=""> 
+                        <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+                        <h5 class="text-center title ">[마시쪄]</h5>
+                        <p class="text-center description ">이건말이여</p>
+            </a>
+          </div>
+             <div class="col-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/App_cos05.png" alt="">
+                <div class="d-flex price-label">
+                            <button class=" btn btn-primary btn-round mx-auto">27,000원</button>
+                        </div>
+               <span class="title">[회사]</span>
+            </a>
+          </div>
+
+                  <div class="col-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/App_cos05.png" alt="">
+            </a>
+          </div>
+                 <div class="col-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/App_cos05.png" alt="">
+            </a>
+          </div>
+                 <div class="col-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/App_cos05.png" alt="">
+            </a>
+          </div>
+                 <div class="col-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/App_cos05.png" alt="">
+            </a>
+          </div>
+            
+            
+            
+            
+        </div>
+      </div>
+    </section>
+        
+        
+    </div>    
+</div>
+      
+    <!-- Cart Section -->
+<div class="main-cart">
+
+    <!-- About Section -->
+    <div>
+        <div style="height: 3.6rem;"> </div>
+      <div class="container" style="margin-bottom: 0;">
+        <div style="max-width: 1400px; margin-bottom: 0;">
+            <p class="text-right text-uppercase text-gray custom-font80" style="font-size :1.5rem; color: dimgray ; margin-bottom: 0.8rem">
+                총 : 43,000 원 
+                <a><img src="img/App_02_buying.png" style="width: 40%"></a>
+            </p>
+        </div>
+        <div class="text-right">
+            <img class="cart-item" src="img/App_cos05.png">
+            <img class="cart-item" src="img/App_cos06.png">
+            <img class="cart-item" src="img/App_cos02.png">
+        </div>
+        <div class="text-center mt-4">
+         
+        </div>
+      </div>
+    </div>
+
+</div>  
+
+   
+
+    
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) 
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+    -->
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <img src="img/Popup_X.png">
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-12 mx-auto">
+              <p class="mb-0 text-white custom-font80" style="font-size: 1.6rem" >[유세린] <span class="custom-font20">더머토 클린 
+                 <br> 클래리파잉 토너 </span>
+              </p>
+               
+              <div class="popup-main row" style="margin: 0 0.8rem ">   
+                 
+                  <div class="popup-image col-5" style="margin: 0px; padding: 0px;">
+                      <img src="img/App_Re_02.png" width="170" style="margin: 0; padding: 0">
+                  </div>
+                  <div class="product-explain col-7 text-left text-white" >
+                      <br>
+                            <span class="custom-font40" style="font-size: 1.3rem;" >
+                             26,000원</span>
+                            <hr style="color : white; margin: 0.5rem;">
+                            <span  class="custom-font20" style="font-size: 1rem; ">
+                        
+                            피부 본연의 pH 균형 유지에 도움을 주는 저자극 약산성 토너 <br></span>
+                            <div class="text-center">
+                          
+                            <span style="font-size: 1rem" >
+                                총 <button class="btn-round" type="number" value="1"  style="font-size: 1rem; padding: 0.5rem 3rem; margin-left: auto; margin-right: 0.5rem;"> <span style="font-size: 1rem">1</span>
+                                </button> 개
+                            </span>
+                            </div>
+                  </div>
+                 
+                  <div class="col-12 text-white text-center" style="background: orange;">
+                    
+                        <button class="btn-round portfolio-modal-dismiss" style="font-size: 1rem; padding: 0.5rem 3rem; margin-left: auto; margin-right: 0.5rem;">장바구니</button>
+                        <button class="btn-round"  style="font-size: 1rem; padding: 0.5rem 3rem; margin-left: 0.5rem; margin-right: auto;">샘플받기</button>
+                        <button class="btn-round" style="font-size: 1rem; padding: 0.51rem 6rem;">바로구매</button>
+
+
+
+                        <div class="review-page text-left">
+                            <div >
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_Review_transstar.png" width="15"> 
+                                <img src="img/Popup_Review_transstar.png" width="15">   
+                                <span style="float: right">jyyu****</span>
+                                <hr style="margin: 0.8rem 0.5rem; float: right; width: 59%;">
+                            </div>
+                            <div>
+                                <p  class="text-left" style="font-size: 1rem; margin-bottom: 0">
+                                 좋다는 소문 듣고 샀는데 좋네요!!!! 닦토로 써도 되고 여러가지 다양한 용도로 쓸 수 있어서 좋아요 ~~    </p>
+                            </div>
+                             <div >
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_review_fullstar.png" width="15">
+                                <img src="img/Popup_Review_transstar.png" width="15"> 
+                                <img src="img/Popup_Review_transstar.png" width="15">   
+                                <span style="float: right">jyyu****</span>
+                                <hr style="margin: 0.8rem 0.5rem; float: right; width: 59%;">
+                            </div>
+                            <div>
+                                <p  class="text-left" style="font-size:1 rem;  margin-bottom: 0">
+                                 좋다는 소문 듣고 샀는데 좋네요!!!! 닦토로 써도 되고 여러가지 다양한 용도로 쓸 수 있어서 좋아요 ~~    </p>
+                            </div>
+                        </div>
+                      
+                       
+                        <br>
+                  </div>
+<div class="text-center">
+    <span class="btn-round" style="padding:  0 10px">dfdfdf</span>
+    <span class="btn-round" style="padding:  0 10px">dfdfdf</span>
+    <span class="btn-round" style="padding:  0 10px">dfdfdf</span>
+</div>
+                
+                  
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
+      <div class="portfolio-modal-dialog bg-red">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+
+</html>

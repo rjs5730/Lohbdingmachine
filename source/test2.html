@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		 $.ajax({
+                type: 'get',
+                url: 'http://13.125.122.177:8080/lobdingmachine/app/product/getByCategoryIdx?categoryIdx=1',
+                dataType: 'json',
+                success: function(data) {
+                    var length = Object.keys(data).length;
+                    var text = "";
+                    //div태그에 html로 출력!!
+                   
+                    $("#listLayout").val(data[3].name);
+                }
+            });
+	})
+</script>
+</head>
+<body>
+	<select id="resultSelect">
+		<option value="Y">성공JSON</option>
+		<option value="N">실패JSON</option>
+	</select>
+	<input type="button" id="searchButton" value="조회" />
+	<br />
+	<div id="listLayout"></div>
+</body>
+</html>
+

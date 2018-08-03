@@ -1,0 +1,256 @@
+@font-face {
+    font-family: HGfont20;
+    src: url('font/HGGGothicssi_Pro_20g.otf') format('otf');
+
+}
+
+
+< !-- font local-- > .custom-font00 {
+    font-family: 'HG꼬딕씨_Pro 00g';
+}
+
+.custom-font20 {
+    font-family: 'HG꼬딕씨_Pro 20g';
+}
+
+.custom-font40 {
+    font-family: 'HG꼬딕씨_Pro 40g';
+}
+
+.custom-font60 {
+    font-family: 'HG꼬딕씨_Pro 60g';
+}
+
+.custom-font80 {
+    font-family: 'HG꼬딕씨_Pro 80g';
+}
+
+.custom-font99 {
+    font-family: 'HG꼬딕씨_Pro 99g';
+}
+
+
+
+
+
+body,
+html {
+    height: 100%;
+    margin;
+    0;
+    font-family: 'HG꼬딕씨_Pro 20g';
+}
+
+.pay-img-title {
+    width: 100%;
+    font-size:40px;
+    color: #ea4709;
+    font-weight: 700;
+    height: auto;
+    
+}
+
+.pay-img-back {
+    position:absolute;
+    max-width: 30%;
+    top:-3px;
+    left:5px;
+    
+}
+
+
+.pay-product-scroll {
+    overflow-y: scroll;
+    height: 520px;
+}
+
+.img-item {
+    position:relative;
+}
+
+.img-item .btn-x{
+    position: absolute;
+    top:35px;
+    left:540px;
+    width: 25px;
+}
+
+.img-item .title {
+    position:absolute;
+    top:45px;
+    left:200px;
+    color:#666666;
+    width:55%
+}
+
+.img-item .title h{
+    position:absolute;
+    top:45px;
+    left:200px;
+    color:#666666;
+    width:25%
+}
+
+.img-item .title p{
+    font-size: 18px;
+}
+
+.img-item .company {
+    
+}
+
+.img-item .sale-count {
+    position: absolute;
+    top:105px;
+    left:440px;
+    z-index:10;
+}
+
+.img-item .name {
+    
+}
+.img-item .sale-image {
+    position: absolute;
+    top:12px;
+    left:40px;
+}
+
+.img-item .btn-round {
+        background-color: #ea4609;
+        border: white;
+        border-bottom-width: 10px;
+        color: white;
+        margin:auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 3px 20px 3px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+        width: 120px;
+        
+    }
+
+.img-item .btn-plus {
+    position :absolute;
+    background: url('/img/pay/App_buying_white_+.png') no-repeat;
+    border: none;
+    width:42px;
+    left:78px;
+    top:-2px;
+}
+
+.img-item .btn-minus {
+    position :absolute;
+    width:50px;
+    left:-3px;
+    top:2px;
+    
+}
+
+
+
+.label-price {
+    margin-top: 30px;
+}
+
+.label-price .title {
+    padding-left: 100px;
+}
+
+.label-price .price {
+     padding-right: 100px;
+    text-align: right;
+}
+
+
+
+.pay-select {
+    position:relative;
+}
+
+.pay-select p {
+    font-size: 20px;
+}
+
+.pay-select .pay-point-label {
+    position:absolute;
+    top:60px;
+    left:80px;
+}
+
+.pay-select .pay-point-number {
+    position:absolute;
+    top:60px;
+    left:300px;
+    color:black;
+    width:300px;
+}
+
+.pay-select .pay-point-btn {
+    position:absolute;
+    width:250px;
+    top:100px;
+    left:350px;
+}
+
+.pay-select .pay-how {
+    position:absolute;
+    top:220px;
+    left: 80px;
+}
+
+
+.pay-select .pay-btn {
+        background-color: white;
+        border: white;
+        border-bottom-width: 10px;
+        color: #ea4709;
+        margin:auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 6px 20px 6px 20px;
+        font-size: 30px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+        width: 260px;
+        
+    }
+
+
+#last-section {
+    display: none;
+}
+
+
+.pay-lastpage img{
+      max-width: 70%;
+    margin-top: 170px;
+      height: auto;
+}
+
+
+
+.pay-lastpage .btn-shopping {
+        background-color: #ea4609;
+        border: white;
+        border-bottom-width: 10px;
+        color: white;
+        margin:auto;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 90px 10px 90px;
+        font-size: 26px;
+        cursor: pointer;
+        border-radius: 10rem !important;
+        text-align: center;
+        
+    }
+
+.pay-lastpage .btn-shopping  a{
+        color: white;
+        margin:auto;
+        
+    }
