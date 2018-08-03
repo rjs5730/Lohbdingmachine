@@ -991,7 +991,7 @@
 
                         <div class="row pay-how mx-auto">
                             <div class="col-md-6 col-lg-6 col-sm-6 col-6 text-right ">
-                                <button id="money" type="submit" class="btn pay-btn" name="categoryIdx" value="1">현금결제</button>
+                                <button id="money" type="submit" class="btn pay-btn" value="0101231234"name="categoryIdx" value="1">현금결제</button>
                             </div>
 
                             <div class="col-md-6 col-lg-6 col-sm-6 col-6 text-left">
@@ -1235,14 +1235,19 @@
             
            
             
-            function total_price(data){
+            function total_price(){
+                //초기화
+                $('#product-total-price').text("");
                 
-                var cnt=data.length;
-                var total;
-                for(var i=0;i<cnt; i++) {
-                    total+=cnt.price;
+                var total=0;
+                for(var i=0;i<buyList.length; i++) {
+                    total+=buyList[i].price;
                 }
-                return total;
+                
+                
+                $('#product-total-price').text(comma(total)+"원");
+                
+                
             }
             
             //3자리수 컴마
@@ -1298,8 +1303,8 @@
             
             //현금결제를 한 경우
             $('#money').click(function() {
-                $('#pay-section').css("display","none");
-                $('#last-section').css("display","block");
+                
+                createDataAndConnect();
             });
             
             
@@ -1317,7 +1322,6 @@
                         data = buyList[i];
 
                         $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h2 id="product-price">'+comma(data.price)+"원"+'</h2></div></div>');
-
                     }
                 
                    $('.btn-plus').click(function() {
@@ -1336,7 +1340,11 @@
                         var n = $('.btn-x').index(this);
                         buyList.splice(n,1);
                         $(".img-item:eq(" + n + ")").remove();
+                        total_price()
                     });
+                
+                //총 가격 표시
+                total_price();
                 
                 
             }
@@ -1344,48 +1352,52 @@
             
             //최종 구매내역 ajax통신
             
-//        function createData() {
-//            var data = {
-//                "productList": [{
-//                        "idx": 10,
-//                        "buyCount": 2
-//                    },
-//                    {
-//                        "idx": 11,
-//                        "buyCount": 4
-//                    }
-//                ],
-//                "phoneNumber": "0101231234",
-//                "cardNumber": "123123"
-//            }
-//            
-//            return JSON.stringify(data);
-//
-//        }
-//
-//        //제품 구매
-//        $.ajax({
-//            type: "POST",
-//            url: "http://13.125.122.177:8080/lobdingmachine/app/product/buy",
-//            dataType: "json",
-//            error: function() {
-//                alert('통신실패!!');
-//            },
-//            beforeSend: function(xhr) {
-//                xhr.setRequestHeader("key", "Content-Type");
-//                xhr.setRequestHeader("Content-type", "application/json");
-//            },
-//            data: createData(),
-//            success: function(data) {
-//                //alert("통신데이터 값 : " + JSON.stringify(data)) ;
-//                //console.log(data);
-//                $('#test').text(JSON.stringify(data[0]));
-//                //$("#dataArea").html(data) ;
-//
-//                product_data = data;
-//            }
-//
-//        });
+        function createDataAndConnect() {
+            
+            
+            for(var i=0; i<buyList.length; i++)
+            {
+                var itemObject=new Object();
+                itemObject.idx=buyList[i].idx;
+                itemObject.buyCount=$(".num:eq(" + i + ")").val();
+                payList.push(itemObject);
+            }
+            
+            var data = {
+                "productList": payList,
+                "phoneNumber": $('.pay-point-number').val(),
+                "cardNumber": "123123"
+            }
+            
+            console.log(data);
+            
+            //return JSON.stringify(data);
+            
+            
+            //제품 구매
+            $.ajax({
+                type: "POST",
+                url: "http://13.125.122.177:8080/lobdingmachine/app/product/buy",
+                dataType: "json",
+                error: function() {
+                    alert('통신실패!!');
+                },
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("key", "Content-Type");
+                    xhr.setRequestHeader("Content-type", "application/json");
+                },
+                data: JSON.stringify(data),
+                success: function(data) {
+                    $('#pay-section').css("display","none");
+                    $('#last-section').css("display","block");
+                }
+
+            });
+
+        }
+
+        
+            
             
 
 
