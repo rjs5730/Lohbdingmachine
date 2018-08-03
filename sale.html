@@ -1328,43 +1328,33 @@
                 
              for(var i = 0; i<listIdx; i++)
              {
-//                    if(i==0){
-//                        
-//                        data = buyList[i];
-//                        // 결제상품 정보 설정
-//                        $("#product-image").attr("src",data.imgUrl);
-//                        //$("#product-name").text(data.name);
-//                        $("#product-company").text('['+data.company+']'+data.name);
-//                        $("#product-price").text(comma(data.price)+"원");
-//                        $("#product-total-price").text(total_price(data));
-//                    } else{
-                        data = buyList[i];
-                        
-                        $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h2 id="product-price">'+comma(data.price)+"원"+'</h2></div></div>');
+                    data = buyList[i];
 
-                        
-                         $('.btn-plus').click(function() {
-                            var n = $('.btn-plus').index(this);
-                            var num = $(".num:eq(" + n + ")").val();
-                            num = $(".num:eq(" + n + ")").val(num * 1 + 1);
-                        });
-                        $('.btn-minus').click(function() {
-                            var n = $('.btn-minus').index(this);
-                            var num = $(".num:eq(" + n + ")").val();
-                            if (num > 1) {
-                                num = $(".num:eq(" + n + ")").val(num * 1 - 1);
-                            }
-                        });
-                        $('.btn-x').click(function() {
-                            var n = $('.btn-x').index(this);
-                            $(".img-item:eq(" + n + ")").remove();
-                        });
-            
-                        
-//                    }
-                    
+                    $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h2 id="product-price">'+comma(data.price)+"원"+'</h2></div></div>');
+
+
+                  
+
                     
                 }
+                
+                   $('.btn-plus').click(function() {
+                        var n = $('.btn-plus').index(this);
+                         console.log(n);
+                        var num = $(".num:eq(" + n + ")").val();
+                        num = $(".num:eq(" + n + ")").val(num * 1 + 1);
+                    });
+                    $('.btn-minus').click(function() {
+                        var n = $('.btn-minus').index(this);
+                        var num = $(".num:eq(" + n + ")").val();
+                        if (num > 1) {
+                            num = $(".num:eq(" + n + ")").val(num * 1 - 1);
+                        }
+                    });
+                    $('.btn-x').click(function() {
+                        var n = $('.btn-x').index(this);
+                        $(".img-item:eq(" + n + ")").remove();
+                    });
                 
                 
                 
