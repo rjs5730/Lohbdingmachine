@@ -1176,23 +1176,24 @@
 
                     $(".popup-addCart").click(function() {
                         console.log(product_data[productIdx].name);
-                        costAll = costAll + product_data[productIdx].price;
-                        //                         buyList.push(JSON.stringify(product_data[productIdx]));
                         buyList.push(product_data[productIdx]);
-                        
-                        $(".costAll").text(costAll);
-                        $(".cart-item-" + cartItemNum).attr("src", product_data[productIdx].imgUrl);
-                        cartItemNum = cartItemNum + 1;
-                        
-                        console.log(buyList);
-                        
-                        
+//                        costAll = costAll + product_data[productIdx].price;
+//                        //                         buyList.push(JSON.stringify(product_data[productIdx]));
+//                        
+//                        
+//                        $(".costAll").text(costAll);
+//                        $(".cart-item-" + cartItemNum).attr("src", product_data[productIdx].imgUrl);
+//                        cartItemNum = cartItemNum + 1;
+//                        
+                        cartUpdate();
                         // 닫기
                         var magnificPopup = $.magnificPopup.instance; 
                         magnificPopup.close(); 
 
 
                     });
+                    
+               
 
 
                     //  alert($(this).val());
@@ -1233,6 +1234,24 @@
                 $.magnificPopup.close();
               });
             
+            
+            //장바구니 업데이트
+         function cartUpdate() {
+
+                //초기화
+                 for(var i=0; i<5; i++) {
+                    $(".cart-item-" + i).attr("src", "");
+                }
+
+                costAll = costAll + product_data[productIdx].price;
+                //                         buyList.push(JSON.stringify(product_data[productIdx]));
+
+                $(".costAll").text(costAll);
+
+                for(var i=0; i<buyList.length; i++) {
+                    $(".cart-item-" + i).attr("src", buyList[i].imgUrl);
+                }
+            }
            
             
             function total_price(){
@@ -1241,11 +1260,13 @@
                 
                 var total=0;
                 for(var i=0;i<buyList.length; i++) {
-                    total+=buyList[i].price;
+                    
+                    var n = $('.btn-minus').index(this);
+                    var num = $(".num:eq(" + n + ")").val();
+                    total+=buyList[i].price*num;
                 }
                 
-                
-                $('#product-total-price').text(comma(total)+"원");
+                $('#product-total-price').text( (total)+"원");
                 
                 
             }
@@ -1264,12 +1285,8 @@
                     str += num.substring(point, point + 3); 
                     point += 3; 
                 } 
-
                 return str;
-
             }
-            
-            
             
             $('.pay-img-back').click(function() {
                 //window.history.back();
@@ -1278,6 +1295,8 @@
                 
                 $(".img-item").remove();
                 
+                //뒤로 갈경우 카드 업데이트 항상
+                cartUpdate();
               
             });
 
@@ -1328,6 +1347,7 @@
                         var n = $('.btn-plus').index(this);
                         var num = $(".num:eq(" + n + ")").val();
                         num = $(".num:eq(" + n + ")").val(num * 1 + 1);
+                        total_price();
                     });
                     $('.btn-minus').click(function() {
                         var n = $('.btn-minus').index(this);
@@ -1335,6 +1355,7 @@
                         if (num > 1) {
                             num = $(".num:eq(" + n + ")").val(num * 1 - 1);
                         }
+                         total_price();
                     });
                     $('.btn-x').click(function() {
                         var n = $('.btn-x').index(this);
@@ -1369,10 +1390,6 @@
                 "cardNumber": "123123"
             }
             
-            console.log(data);
-            
-            //return JSON.stringify(data);
-            
             
             //제품 구매
             $.ajax({
@@ -1395,6 +1412,7 @@
             });
 
         }
+        
 
         
             
