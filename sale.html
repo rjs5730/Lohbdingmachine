@@ -36,7 +36,7 @@
    
     <div  class="main-content">
        
-       <a href="/Lohbdingmachine/index.html"><img class="pay-img-back" src="img/sale/App_Skincare_backbutton.png" alt=""></a>
+       <a href="/Lohbdingmachine/index.html"><img class="sale-img-back" src="img/sale/App_Skincare_backbutton.png" alt=""></a>
             <div class="mt-4 text-center">
                <p id="category-title" class="pay-img-title custom-font99" style="margin: 0;"></p>
             </div>
@@ -826,8 +826,14 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 
 	</div>
+=======
+    </div>
+    
+
+>>>>>>> f61c304878d0bc8c006d85038053923952374db6
 
 <!-- 판매 코드-->
 
@@ -1177,13 +1183,16 @@
                 $("#sale-section").css("display","block");
                 $("#pay-section").css("display","none");
                 
-                $(".img-item").remove();
+                $(".img-item").remove(); 
                 
                 //뒤로 갈 경우 가격 업데이트
                 cartUpdate();
                 var val_price=$('#product-total-price').text();
                 $(".costAll").text(val_price);
               
+            });
+            $('.sale-img-back').click(function() {
+                window.history.back();
             });
 
              $('.product-0').click(function(e) {
@@ -1200,7 +1209,8 @@
             
             //장바구니 아이템 삭제 
             $('.cart-item').click(function() {
-                var n = $(this).index(this);
+                var n = $($('.cart-item')).index(this);
+                console.log(n);
                 buyList.splice(n,1);
                 $(".cart-item-" + n).attr("src", "");
                 
