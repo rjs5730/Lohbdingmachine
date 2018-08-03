@@ -184,7 +184,7 @@
             <div class="container cart-bg" style="margin: 0; max-width: 1800px; height: 200px;">
                 <div style="margin-bottom: 0;">
                     <p class="text-right text-uppercase text-gray custom-font80" style="font-size :1.5rem; color: dimgray ; margin-bottom: 0.8rem">
-                        총 : <span class="costAll"> 0 </span> 원
+                        총 : <span class="costAll"> 0 </span>
                         <a class="buyList"><img src="img/sale/App_02_buying.png" style="width: 40%"></a>
                     </p>
                 </div>
@@ -1043,6 +1043,8 @@
             var productIdx = 0;
             var buyList = new Array();
             var payList = new Array();
+            
+            
             //비동기 통신을 하여 json타입으로 호출한다.
             
             
@@ -1058,7 +1060,6 @@
                     }
                     $(".costAll").text(cartCost);
 
-					console.log(buyList);
 //                  console.log(product_data[productIdx].name);
 //					costAll = costAll + product_data[productIdx].price;
 //					//                         buyList.push(JSON.stringify(product_data[productIdx]));
@@ -1236,20 +1237,22 @@
             
             
             //장바구니 업데이트
-         function cartUpdate() {
+            function cartUpdate() {
 
                 //초기화
                  for(var i=0; i<5; i++) {
                     $(".cart-item-" + i).attr("src", "");
                 }
+                
+                  addCartPriceUpdate();
 
-                costAll = costAll + product_data[productIdx].price;
-                //                         buyList.push(JSON.stringify(product_data[productIdx]));
-
-                $(".costAll").text(costAll);
-
+//                costAll = costAll + product_data[productIdx].price;
+//                //                         buyList.push(JSON.stringify(product_data[productIdx]));
+//
+//                $(".costAll").text(comma(costAll)+"원");
                 for(var i=0; i<buyList.length; i++) {
                     $(".cart-item-" + i).attr("src", buyList[i].imgUrl);
+                    
                 }
             }
            
@@ -1260,15 +1263,11 @@
                 
                 var total=0;
                 for(var i=0;i<buyList.length; i++) {
-                    
-                    var n = $('.btn-minus').index(this);
-                    var num = $(".num:eq(" + n + ")").val();
+                    var num = $(".num:eq(" + i+ ")").val();
                     total+=buyList[i].price*num;
                 }
                 
-                $('#product-total-price').text( (total)+"원");
-                
-                
+                $('#product-total-price').text(comma(total)+"원");
             }
             
             //3자리수 컴마
@@ -1295,8 +1294,10 @@
                 
                 $(".img-item").remove();
                 
-                //뒤로 갈경우 카드 업데이트 항상
+                //뒤로 갈 경우 가격 업데이트
                 cartUpdate();
+                var val_price=$('#product-total-price').text();
+                $(".costAll").text(val_price);
               
             });
 
@@ -1310,6 +1311,26 @@
                 // save instance in magnificPopup variable
                 magnificPopup.close(); 
 
+            });
+            
+            //장바구니 아이템 삭제 
+            $('.cart-item').click(function() {
+                var n = $(this).index(this);
+                buyList.splice(n,1);
+                $(".cart-item-" + n).attr("src", "");
+                
+                addCartPriceUpdate();
+                
+            
+                 //초기화
+                 for(var i=0; i<5; i++) {
+                    $(".cart-item-" + i).attr("src", "");
+                 }
+                for(var i=0; i<buyList.length; i++) {
+                    $(".cart-item-" + i).attr("src", buyList[i].imgUrl);
+                    
+                }
+                
             });
             
 
@@ -1326,6 +1347,14 @@
                 createDataAndConnect();
             });
             
+            //장바구니 가격 체크
+           function addCartPriceUpdate() {
+                var total=0;
+                for(var i=0;i<buyList.length; i++) {
+                    total+=buyList[i].price;
+                }
+                $(".costAll").text(comma(total)+"원");
+           }
             
             
             //아이템 리스트 함수
@@ -1361,7 +1390,7 @@
                         var n = $('.btn-x').index(this);
                         buyList.splice(n,1);
                         $(".img-item:eq(" + n + ")").remove();
-                        total_price()
+                        total_price();
                     });
                 
                 //총 가격 표시
@@ -1369,6 +1398,7 @@
                 
                 
             }
+            
             
             
             //최종 구매내역 ajax통신
