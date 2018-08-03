@@ -1275,20 +1275,11 @@
                 
               
             });
-            $('#money').click(function() {
-                $('#pay-section').css("display","none");
-                $('#last-section').css("display","block");
-            });
 
              $('.product-0').click(function(e) {
-               var idx = productIdx;
-                var data=product_data[idx];
-                 
+                 //아이템 바로 추가
                 buyList.push(product_data[productIdx]);
-                 var buylist_length=buyList.length;
-                // 결제 화면 보이기
-                $("#sale-section").css("display","none");
-                $("#pay-section").css("display","block");
+                 
                 productItemList();
                  
                 var magnificPopup = $.magnificPopup.instance; 
@@ -1300,16 +1291,24 @@
 
             
             $(".buyList").click(function(){
-               
-                // 결제 화면 보이기
-                $("#sale-section").css("display","none");
-                $("#pay-section").css("display","block");
                 
                 productItemList();
             
             });
             
+            //현금결제를 한 경우
+            $('#money').click(function() {
+                $('#pay-section').css("display","none");
+                $('#last-section').css("display","block");
+            });
+            
+            
+            
+            //아이템 리스트 함수
             function productItemList() {
+                // 결제 화면 보이기
+                $("#sale-section").css("display","none");
+                $("#pay-section").css("display","block");
                  var data;
                 var listIdx = buyList.length; 
                 
@@ -1341,6 +1340,52 @@
                 
                 
             }
+            
+            
+            //최종 구매내역 ajax통신
+            
+//        function createData() {
+//            var data = {
+//                "productList": [{
+//                        "idx": 10,
+//                        "buyCount": 2
+//                    },
+//                    {
+//                        "idx": 11,
+//                        "buyCount": 4
+//                    }
+//                ],
+//                "phoneNumber": "0101231234",
+//                "cardNumber": "123123"
+//            }
+//            
+//            return JSON.stringify(data);
+//
+//        }
+//
+//        //제품 구매
+//        $.ajax({
+//            type: "POST",
+//            url: "http://13.125.122.177:8080/lobdingmachine/app/product/buy",
+//            dataType: "json",
+//            error: function() {
+//                alert('통신실패!!');
+//            },
+//            beforeSend: function(xhr) {
+//                xhr.setRequestHeader("key", "Content-Type");
+//                xhr.setRequestHeader("Content-type", "application/json");
+//            },
+//            data: createData(),
+//            success: function(data) {
+//                //alert("통신데이터 값 : " + JSON.stringify(data)) ;
+//                //console.log(data);
+//                $('#test').text(JSON.stringify(data[0]));
+//                //$("#dataArea").html(data) ;
+//
+//                product_data = data;
+//            }
+//
+//        });
             
 
 
