@@ -32,13 +32,13 @@
 
     < !-- ////////////////////////// -->       
     .main-content {
-        height: 100vh;
+        height: 80vh;
     }
 
     @media (min-width:500px) {
         .jjj {
-            min-height: 70vh;
-            height: 70vh;
+            min-height: 60vh;
+            height: 60vh;
 
         }
     }
@@ -116,6 +116,7 @@
     .cart-bg {
         background: #FDF0EC;
         height: 144px;
+		top:800px;
     }
 
     < !-- ///////    제품 csss   //////////////// -->
@@ -166,7 +167,7 @@
     }
 
 .main-body{
-    width: 65%;
+    width: 60%;
     margin: auto;
     
 }
