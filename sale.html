@@ -826,7 +826,8 @@
         </div>
     </div>
 
-
+    </div>
+    
 
 
 <!-- 판매 코드-->
@@ -1203,7 +1204,8 @@
             
             //장바구니 아이템 삭제 
             $('.cart-item').click(function() {
-                var n = $(this).index(this);
+                var n = $($('.cart-item')).index(this);
+                console.log(n);
                 buyList.splice(n,1);
                 $(".cart-item-" + n).attr("src", "");
                 
