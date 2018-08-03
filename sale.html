@@ -1,4 +1,4 @@
-dfdfdfdf
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +46,7 @@ dfdfdfdf
             <section class="portfolio" id="portfolio">
                 <div class="container" style="height: 300px;">
                     <div class="row jjj product" style="line-height: 1.2;text-align: center">
-                        <div class="col-4 itemIdx-0">
+                        <div class="col-4 itemIdx-0 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-0">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -59,7 +59,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-0" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-1">
+                        <div class="col-4 itemIdx-1 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -72,7 +72,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-1" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-2">
+                        <div class="col-4 itemIdx-2 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -85,7 +85,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-2" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-3">
+                        <div class="col-4 itemIdx-3 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -98,7 +98,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-3" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-4">
+                        <div class="col-4 itemIdx-4 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -111,7 +111,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-4" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-5">
+                        <div class="col-4 itemIdx-5 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -124,7 +124,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-5" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-6">
+                        <div class="col-4 itemIdx-6 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -137,7 +137,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-6" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-7">
+                        <div class="col-4 itemIdx-7 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-7">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -150,7 +150,7 @@ dfdfdfdf
                             </a>
                             <input class="itemIdx-7" type="hidden" value="3">
                         </div>
-                        <div class="col-4 itemIdx-8">
+                        <div class="col-4 itemIdx-8 product-view">
                             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-8">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
@@ -181,8 +181,8 @@ dfdfdfdf
         <!-- About Section -->
         <div>
             <div style="height: 3.6rem;"> </div>
-            <div class="container cart-bg" style="margin-bottom: 0;">
-                <div style="max-width: 1400px; margin-bottom: 0;">
+            <div class="container cart-bg" style="margin: 0; max-width: 1800px;">
+                <div style="margin-bottom: 0;">
                     <p class="text-right text-uppercase text-gray custom-font80" style="font-size :1.5rem; color: dimgray ; margin-bottom: 0.8rem">
                         총 : <span class="costAll"> 0 </span> 원
                         <a class="buyList"><img src="img/sale/App_02_buying.png" style="width: 40%"></a>
@@ -1075,20 +1075,21 @@ dfdfdfdf
             
             $(document).ready(function() {
                 idx = buyList.length;
-                var cartCost = 0;
-                for(var i = 0; i<idx; i++){
-                    cartCost += buyList[i].price;
-                    $(".cart-item-" + cartItemNum).attr("src", product_data[productIdx].imgUrl);
-                }
-                $(".costAll").text(cartCost);
-                
-                
-                 console.log(product_data[productIdx].name);
-                        costAll = costAll + product_data[productIdx].price;
-                        //                         buyList.push(JSON.stringify(product_data[productIdx]));
-                        buyList.push(product_data[productIdx]);
+                if(idx != 0){
+                    var cartCost = 0;
+                    for(var i = 0; i < idx; i++){
+                        cartCost += buyList[i].price;
+                        $(".cart-item-" + i).attr("src", buyList[i].imgUrl);
+                    }
+                    $(".costAll").text(cartCost);
 
-                
+					console.log(buyList);
+//                  console.log(product_data[productIdx].name);
+//					costAll = costAll + product_data[productIdx].price;
+//					//                         buyList.push(JSON.stringify(product_data[productIdx]));
+//					buyList.push(product_data[productIdx]);
+
+                }
                 
             });
             

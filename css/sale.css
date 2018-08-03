@@ -114,7 +114,8 @@
 
 
     .cart-bg {
-        background: #FDF0EC
+        background: #FDF0EC;
+        height: 144px;
     }
 
     < !-- ///////    제품 csss   //////////////// -->
@@ -158,6 +159,14 @@
         top: -40px
     }
 
-    .col-4 {
-        padding: 0;
+    .product-view{
+        padding : 0;
+        margin : 0;
+        width: 70%
     }
+
+.main-body{
+    width: 65%;
+    margin: auto;
+    
+}
