@@ -1145,11 +1145,11 @@
                     
                     $("#category-title").text(title);
                     
-                    for (var i = 0; i < length; i++) {
+                    for (var i = 0; i < 9; i++) {
                         number = i;
 
                         $(".img-fluid-" + i).attr("src", data[i].imgUrl);
-                        $(".itemIdx-" + i).val(data[i].idx);
+                        $(".itemIdx-" + i).val(i);
                         $(".product-name-" + i).text(data[i].name);
                         $(".company-name-" + i).text("[" + data[i].company + "]");
                         $(".popup-company-" + i).text(data[i].company);
@@ -1187,7 +1187,7 @@
 
                     $(".col-4").click(function() {
                         
-                        productIdx = $(this).val() - 1;
+                        productIdx = $(this).val();
                         // 0,1,2,3,4,5,6,7,8
                         console.log(productIdx); 
                     });
