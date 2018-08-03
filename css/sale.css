@@ -1,173 +1,267 @@
     @font-face {
-        font-family: HGfont20;
-        src: url('font/HGGGothicssi_Pro_20g.otf') format('otf');
+    	font-family: HGfont20;
+    	src: url('font/HGGGothicssi_Pro_20g.otf') format('otf');
 
     }
 
 
     < !-- font local-- > .custom-font00 {
-        font-family: 'HG꼬딕씨_Pro 00g';
+    	font-family: 'HG꼬딕씨_Pro 00g';
     }
 
     .custom-font20 {
-        font-family: 'HG꼬딕씨_Pro 20g';
+    	font-family: 'HG꼬딕씨_Pro 20g';
     }
 
     .custom-font40 {
-        font-family: 'HG꼬딕씨_Pro 40g';
+    	font-family: 'HG꼬딕씨_Pro 40g';
     }
 
     .custom-font60 {
-        font-family: 'HG꼬딕씨_Pro 60g';
+    	font-family: 'HG꼬딕씨_Pro 60g';
     }
 
     .custom-font80 {
-        font-family: 'HG꼬딕씨_Pro 80g';
+    	font-family: 'HG꼬딕씨_Pro 80g';
     }
 
     .custom-font99 {
-        font-family: 'HG꼬딕씨_Pro 99g';
+    	font-family: 'HG꼬딕씨_Pro 99g';
     }
 
 
     < !-- ////////////////////////// -->       
     .main-content {
-        height: 80vh;
+    	height: 80vh;
     }
 
     @media (min-width:500px) {
-        .jjj {
-            min-height: 60vh;
-            height: 60vh;
+    	.jjj {
+    		min-height: 60vh;
+    		height: 60vh;
 
-        }
+    	}
     }
 
     @media (min-width:500px) {
-        .main-cart {
-            height: 20vh;
-        }
+    	.main-cart {
+    		height: 20vh;
+    	}
     }
 
     .cart-item {
-        width: 10vh;
-        margin: 0.3vh;
-        0.5vh;
+    	width: 110px;
+    	margin: 0.3vh;
     }
 
     body,
     html {
-        height: 100%;
-        font-weight: 400;
-        margin;
-        0;
-        font-family: 'HG꼬딕씨_Pro 60g';
+    	height: 100%;
+    	font-weight: 400;
+    	margin;
+    	0;
+    	font-family: 'HG꼬딕씨_Pro 60g';
     }
 
     .bg {
-        /* The image used */
-        background-image: url("App_02_back.png");
-        background-attachment: fixed;
-        /* Center and scale the image nicely */
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+    	/* The image used */
+    	background-image: url("App_02_back.png");
+    	background-attachment: fixed;
+    	/* Center and scale the image nicely */
+    	background-position: top;
+    	background-repeat: no-repeat;
+    	background-size: 100% 100%;
     }
 
     .back-button {
-        position: absolute;
-        left: 50px;
-        top: 20px;
+    	position: absolute;
+    	left: 50px;
+    	top: 20px;
     }
 
     .bg-red {
-        background-color: #E94709 !important;
-        border-radius: 3rem;
+    	background-color: #E94709 !important;
+    	border-radius: 3rem;
     }
 
     .btn-round {
-        background-color: #ffffff;
-        border: none;
-        color: #ea4609;
-        padding: 10px 40px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 10rem !important;
+    	background-color: #ffffff;
+    	border: none;
+    	color: #ea4609;
+    	padding: 10px 40px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 20px;
+    	margin: 4px 2px;
+    	cursor: pointer;
+    	border-radius: 10rem !important;
     }
 
     .font-3rem {
-        font-size: 3rem;
+    	font-size: 3rem;
     }
 
     hr {
-        display: ;
-        height: 1px;
-        border: 0;
-        border-top: 2px solid #fff;
-        margin: 1em 0;
-        padding: -0;
+    	display: ;
+    	height: 1px;
+    	border: 0;
+    	border-top: 2px solid #fff;
+    	margin: 1em 0;
+    	padding: -0;
     }
 
 
     .cart-bg {
-        background: #FDF0EC;
-        height: 144px;
-		top:800px;
+    	background: #FDF0EC;
+    	height: 144px;
+    	top: 800px;
     }
 
     < !-- ///////    제품 csss   //////////////// -->
     .product {
-        padding: 2rem;
+    	padding: 2rem;
     }
 
     .product .item {
-        position: relative;
+    	position: relative;
     }
 
     .product .price-label {
-        position: relative;
-        display: flex;
-        align-items: center;
-        top: -70px;
+    	position: relative;
+    	display: flex;
+    	align-items: center;
+    	top: -70px;
     }
 
     .product .btn-round {
-        background-color: #ea4609;
-        border: white;
-        border-bottom-width: 10px;
-        color: white;
-        margin: auto;
-        text-decoration: none;
-        display: inline-block;
-        padding: 5px 35px;
-        font-size: 20px;
-        cursor: pointer;
-        border-radius: 10rem !important;
-        text-align: center;
+    	background-color: #ea4609;
+    	border: white;
+    	border-bottom-width: 10px;
+    	color: white;
+    	margin: auto;
+    	text-decoration: none;
+    	display: inline-block;
+    	padding: 5px 35px;
+    	font-size: 20px;
+    	cursor: pointer;
+    	border-radius: 10rem !important;
+    	text-align: center;
     }
 
     .product .title {
-        position: relative;
-        top: -40px;
+    	position: relative;
+    	top: -40px;
     }
 
     .product .description {
-        position: relative;
-        top: -40px
+    	position: relative;
+    	top: -40px
     }
 
-    .product-view{
-        padding : 0;
-        margin : 0;
-        width: 70%
+    .product-view {
+    	padding: 0;
+    	margin: 0;
+    	width: 70%
     }
 
-.main-body{
-    width: 60%;
-    margin: auto;
-    
+    .main-body {
+    	width: 60%;
+    	margin: auto;
+
+    }
+
+
+
+
+
+    .popup-addCart {
+    	font-size: 1.3rem;
+    	padding: 0.5rem 3.7rem;
+    	margin-left: auto;
+    	margin-right: 0.5rem;
+    }
+
+    .product-0 {
+    	font-size: 1.3rem;
+    	padding: 0.51rem 10.4rem;
+		margin-bottom: 30px;
+    }
+
+    .popup-getSample {
+    	font-size: 1.3rem;
+    	padding: 0.5rem 3.7rem;
+    	margin-left: 0.5rem;
+    	margin-right: auto;
+    }
+
+    .popup-image-fluid {
+    	width: 180px;
+    	height: 180px;
+    	margin: 0;
+    	padding: 0;
+    }
+
+    .popup-close-button {
+    	width: 40px;
+    }
+
+    .popup-company {
+    	color: white;
+    	font-family: 'HG꼬딕씨_Pro 80g';
+    	font-size: 1.6rem;
+    }
+
+    .popup-itemname {
+    	color: white;
+    	font-family: 'HG꼬딕씨_Pro 20g';
+    }
+
+    .product-explain {
+    	color: white;
+    	text-align: left;
+    }
+
+    .popup-cost {
+    	font-size: 1.4rem;
+    	font-family: 'HG꼬딕씨_Pro 40g';
+
+    }
+
+    .popup-desc {
+    	font-family: 'HG꼬딕씨_Pro 20g';
+    	font-size: 1.2rem;
+
+    }
+
+    .popup-hr {
+    	color: white;
+    	margin: 0rem;
+    	padding: 0.4rem;
+    }
+
+    .popup-review {
+    	font-size: 1rem;
+    	margin-bottom: 0;
+		
+    }
+
+    .popup-keyword {
+    	padding: 0 15px;
+		
+    }
+
+    .popup-review-hr {
+    	margin: 0.8rem 0.1rem;
+		margin-top: 0.8rem;
+		margin-right: 8px;
+    	float: right;
+    	width: 55%;
+		padding-left: 20px
+    }
+.keyword{
+	margin: auto;
+}
+.review-box{
+	height: 30px;
 }
