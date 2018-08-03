@@ -961,26 +961,6 @@ dfdfdfdf
             <div class="pay-product-scroll justify-content-center m-2">
                 
                 <!-- 상품 정보 창 ( 분홍색 창 ) --> 
-                <div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4">
-                    <img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt="">
-                    <img class="btn-x" src="img/pay/App_buying_org_X.png" alt="">
-
-                    <div class="sale-count">
-                        <!-- <div class="btn btn-round num">0</div>-->
-                        <input type="text" class="btn btn-round num" value="1">
-                        <img class="btn-plus" src="img/pay/App_buying_white_+.png" alt="">
-                        <img class="btn-minus" src="img/pay/App_buying_white_-.png" alt="">
-                    </div>
-
-                    <div class="sale-image">
-                        <img id="product-image" src="img/sale/App_Re_03.png" alt="" width="150">
-                    </div>
-                    <div class="title">
-                       <strong><p id="product-company"></p></strong>
-                        <hr>
-                        <h2 id="product-price"></h2>
-                    </div>
-                </div>
 
 
                 
@@ -1312,22 +1292,7 @@ dfdfdfdf
                 $("#pay-section").css("display","none");
               
             });
-            $('.btn-plus').click(function() {
-                var n = $('.btn-plus').index(this);
-                var num = $(".num:eq(" + n + ")").val();
-                num = $(".num:eq(" + n + ")").val(num * 1 + 1);
-            });
-            $('.btn-minus').click(function() {
-                var n = $('.btn-minus').index(this);
-                var num = $(".num:eq(" + n + ")").val();
-                if (num > 1) {
-                    num = $(".num:eq(" + n + ")").val(num * 1 - 1);
-                }
-            });
-            $('.btn-x').click(function() {
-                var n = $('.btn-x').index(this);
-                $(".img-item:eq(" + n + ")").remove();
-            });
+            
             
             $('#money').click(function() {
                 $('#pay-section').css("display","none");
@@ -1344,34 +1309,96 @@ dfdfdfdf
                 $("#sale-section").css("display","none");
                 $("#pay-section").css("display","block");
                 
-                for(var i = 0; i<listIdx; i++){
-                    if(i==0){
-                        
-                        data = buyList[product_data[i].idx-1];
-                        // 결제상품 정보 설정
-                        $("#product-image").attr("src",data.imgUrl);
-                        //$("#product-name").text(data.name);
-                        $("#product-company").text('['+data.company+']'+data.name);
-                        $("#product-price").text(comma(data.price)+"원");
-                        $("#product-total-price").text(total_price(data));
-                    } else{
+                for(var i = 0; i<listIdx; i++)
+                {
+//                    if(i==0){
+//                        
+//                        data = buyList[product_data[i].idx-1];
+//                        // 결제상품 정보 설정
+//                        $("#product-image").attr("src",data.imgUrl);
+//                        //$("#product-name").text(data.name);
+//                        $("#product-company").text('['+data.company+']'+data.name);
+//                        $("#product-price").text(comma(data.price)+"원");
+//                        $("#product-total-price").text(total_price(data));
+//                    } else{
                         data = buyList[product_data[i].idx-1];
                         
                         $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h2 id="product-price">'+comma(data.price)+"원"+'</h2></div></div>');
 
+
+                        $('.btn-plus').click(function() {
+                            var n = $('.btn-plus').index(this);
+                            var num = $(".num:eq(" + n + ")").val();
+                            num = $(".num:eq(" + n + ")").val(num * 1 + 1);
+                        });
+                        $('.btn-minus').click(function() {
+                            var n = $('.btn-minus').index(this);
+                            var num = $(".num:eq(" + n + ")").val();
+                            if (num > 1) {
+                                num = $(".num:eq(" + n + ")").val(num * 1 - 1);
+                            }
+                        });
+                        $('.btn-x').click(function() {
+                            var n = $('.btn-x').index(this);
+                            $(".img-item:eq(" + n + ")").remove();
+                        });
                         
                     }
                     
                     
-                }
-                
-                
-                
-                
+//                }
             });
             
             
-
+            
+            //        function createData() {
+            //            var data = {
+            //                "productList": [{
+            //                        "idx": 10,
+            //                        "buyCount": 2
+            //                    },
+            //                    {
+            //                        "idx": 11,
+            //                        "buyCount": 4
+            //                    }
+            //                ],
+            //                "phoneNumber": "0101231234",
+            //                "cardNumber": "123123"
+            //            }
+            //            
+            //            return JSON.stringify(data);
+            //
+            //        }
+            //
+            //        //제품 구매
+            //        $.ajax({
+            //            type: "POST",
+            //            url: "http://13.125.122.177:8080/lobdingmachine/app/product/buy",
+            //            dataType: "json",
+            //            error: function() {
+            //                alert('통신실패!!');
+            //            },
+            //            beforeSend: function(xhr) {
+            //                xhr.setRequestHeader("key", "Content-Type");
+            //                xhr.setRequestHeader("Content-type", "application/json");
+            //            },
+            //            data: createData(),
+            //            success: function(data) {
+            //                //alert("통신데이터 값 : " + JSON.stringify(data)) ;
+            //                //console.log(data);
+            //                $('#test').text(JSON.stringify(data[0]));
+            //                //$("#dataArea").html(data) ;
+            //
+            //                product_data = data;
+            //            }
+            //
+            //        });
+            
+            
+            
+            
+            
+            
 
         })
     </script>
