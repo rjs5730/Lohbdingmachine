@@ -825,9 +825,12 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
 	</div>
 
+=======
+>>>>>>> 5225c9fa6d23fb259cf532723c0ddb401ef25ee4
 <!-- 판매 코드-->
 
 
@@ -1020,7 +1023,7 @@
                         $(".company-name-" + i).text("[" + data[i].company + "]");
                         $(".popup-company-" + i).text(data[i].company);
                         $(".popup-itemname-" + i).text(data[i].name);
-                        $(".popup-cost-" + i).text(data[i].price);
+                        $(".popup-cost-" + i).text(comma(data[i].price)+" 원");
                         $(".popup-desc-" + i).text(data[i].description);
                         $(".fluid-" + i).attr("src", data[i].imgUrl);
 
