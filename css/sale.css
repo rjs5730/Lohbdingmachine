@@ -273,3 +273,13 @@
 .review-box{
 	height: 30px;
 }
+
+sale-interval-1 {
+    position:relative;
+    top:-40px;
+}
+
+sale-interval-2 {
+    position:relative;
+    top:-60px;
+}
