@@ -227,8 +227,8 @@ html {
 
 
 .pay-lastpage img{
-      max-width: 70%;
-    margin-top: 170px;
+      max-width: 55%;
+    margin-top: 200px;
       height: auto;
 }
 
@@ -255,3 +255,7 @@ html {
         margin:auto;
         
     }
+
+#shopping-continue {
+    display: none;
+}

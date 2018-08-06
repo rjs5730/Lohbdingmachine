@@ -50,12 +50,13 @@
     }
 
     .cart-item {
-    	width: 130px;
-        margin-left: 10px;
-        margin-right: 10px;
+    	width: 120px;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
         margin-bottom: 30px;
         position:relative;
-        top:-40px;
+        top:-30px;
     }
 
     .sale-img-back{
@@ -173,7 +174,7 @@
 
     .product-view {
     	padding: 0;
-    	margin: 0;
+    	margin: 5px 0px;
     	width: 70%
     }
 
@@ -280,10 +281,62 @@
 
 .sale-interval-1 {
     position:relative;
-    top:-40px;
+    top:-20px;
 }
 
 .sale-interval-2 {
     position:relative;
     top:-40px;
+}
+
+.sale-get-sample {
+    padding-top:10px;
+    padding-bottom: 10px;
+     padding-left: 15px;
+    padding-right: 15px;
+    background-color: sandybrown;
+    border-radius: 1rem;
+    position: absolute;
+    display:none;
+    z-index: 10;
+}
+
+.sale-get-sample .sale-sample-auth-btn{
+    background-color: #ffffff;
+    	border: none;
+    	color: #ea4609;
+    	padding: 1px 20px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 20px;
+        margin-top:15px;
+      margin-left: 10px;
+    	cursor: pointer;
+    	border-radius: 10rem !important;
+      
+}
+
+.sale-get-sample .sale-sample-send-btn{
+    background-color: #ffffff;
+    	border: none;
+    	color: #ea4609;
+    	padding: 1px 20px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 20px;
+        margin-top: -15px;
+        margin-left: 10px;
+    	cursor: pointer;
+    	border-radius: 10rem !important;
+}
+
+
+.sale-sample-alert-text {
+    color: red;
+    
+}
+
+.sale-sample-output {
 }
