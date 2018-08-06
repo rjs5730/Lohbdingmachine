@@ -854,10 +854,10 @@
 <!--            <form method="get" action="main.html">-->
                 <div class="row justify-content-center label-price">
                     <div class="col-md-6 col-lg-6 col-sm-6 col-6 title">
-                        <h2>총 가격</h2>
+                        <h3>총 가격</h3>
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-6 col-6 price">
-                        <h2 id="product-total-price"> </h2>
+                        <h3 id="product-total-price"> </h3>
                     </div>
 
 
@@ -1259,7 +1259,7 @@
                  {
                         data = buyList[i];
 
-                        $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h2 id="product-price">'+comma(data.price)+"원"+'</h2></div></div>');
+                        $('.pay-product-scroll').append('<div class="col-md-11 col-lg-11 col-sm-11 col-11 img-item ml-4"><img class="img-fluid" src="img/pay/App_buying_colorbox.png" alt=""><img class="btn-x" src="img/pay/App_buying_org_X.png" alt=""><div class="sale-count"><input type="text" class="btn btn-round num" value="1"><img class="btn-plus" src="img/pay/App_buying_white_+.png" alt=""><img class="btn-minus" src="img/pay/App_buying_white_-.png" alt=""></div><div class="sale-image"> <img id="product-image" src="'+data.imgUrl +'" alt="" width="150"></div><div class="title"><strong><p id="product-company">'+'['+data.company+']'+data.name+'</p></strong><hr><h3 id="product-price">'+comma(data.price)+"원"+'</h3></div></div>');
                     }
                 
                    $('.btn-plus').click(function() {
