@@ -61,7 +61,8 @@ html {
 
 .pay-product-scroll {
     overflow-y: scroll;
-    height: 520px;
+    height: 550px;
+    margin-bottom: 40px;
 }
 
 .img-item {
@@ -198,7 +199,7 @@ html {
 .pay-select .pay-how {
     position:absolute;
     top:220px;
-    left: 80px;
+    left: 60px;
 }
 
 
