@@ -50,8 +50,12 @@
     }
 
     .cart-item {
-    	width: 110px;
-    	margin: 0.3vh;
+    	width: 130px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        position:relative;
+        top:-40px;
     }
 
     .sale-img-back{
@@ -274,12 +278,12 @@
 	height: 30px;
 }
 
-sale-interval-1 {
+.sale-interval-1 {
     position:relative;
     top:-40px;
 }
 
-sale-interval-2 {
+.sale-interval-2 {
     position:relative;
-    top:-80px;
+    top:-40px;
 }
