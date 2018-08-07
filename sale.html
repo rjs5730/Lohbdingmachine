@@ -1108,7 +1108,8 @@
                         $(".popup-cost-" + i).text(comma(data[i].price) + " 원");
                         $(".popup-desc-" + i).text(data[i].description);
                         $(".fluid-" + i).attr("src", data[i].imgUrl);
-
+                        
+                        
                         $(".portfolio-item:eq(" + i + ")").val(data[number]);
                         //                        console.log("first :"+$(".portfolio-item").val());
                         //                        $(".popup-company"+i).val(data.company);
@@ -1398,6 +1399,7 @@
                     $(".sale-sample-alert-text:eq(" + i + ")").text("");
                     $("#sale-sample-auth-input:eq(" + i + ")").val("");
                     $("#sale-sample-send-input:eq(" + i + ")").val("");
+                    $("#sale-sample-output-text").text('');
                 }
             }
 
@@ -1423,12 +1425,12 @@
 
                     var data = {
                         "phoneNumber": temp_phone_number,
-                        "productIdx": temp_product_idx
+                        "productIdx": Number(temp_product_idx)
                     }
 
                     //정상 동작할 경우
                     $.ajax({
-                        type: "post",
+                        type: "get",
                         url: "http://13.125.122.177:8080/lobdingmachine/app/sample/auth",
                         dataType: "json",
                         error: function() {
@@ -1440,10 +1442,9 @@
                         },
                         data: data,
                         success: function(data) {
-                            console.log(data);
-                            //auth_num=data.authnum;
-                            //phone_number=temp_phone_number;
-                            //product_idx=temp_product_idx;
+                            auth_num=data.authnum;
+                            phone_number=temp_phone_number;
+                            product_idx=temp_product_idx;
                             switch(data.code) {
                                 case 100:
                                       $(".sale-sample-alert-text:eq(" + n + ")").text("※ 등록되지 않은 회원입니다.");
@@ -1456,7 +1457,8 @@
                                     break;
                                 default:
                                     $(".sale-sample-alert-text:eq(" + n + ")").text("※ 카카오톡으로 인증번호가 전송되었습니다.");
-                                    auth_num=data.code;
+                                    auth_num=data.data;
+                                    console.log(auth_num);
                                     break;
                             }
                         }
@@ -1472,7 +1474,7 @@
                 var n = $('.sale-sample-send-btn').index(this);
                 var auth_number = $("#sale-sample-send-input:eq(" + n + ")").val();
                 
-                if (auth_number == authNum) {
+                if (auth_number == auth_num) {
                     //인증 성공
                    
                      var data = {
@@ -1481,7 +1483,7 @@
                     }
                      
                     $.ajax({
-                        type: "post",
+                        type: "get",
                         url: "http://13.125.122.177:8080/lobdingmachine/app/sample/send",
                         dataType: "json",
                         error: function() {
@@ -1493,10 +1495,8 @@
                         },
                         data: data,
                         success: function(data) {
-                            alert(data);
-                            console.log(data);
                             $(".sale-sample-alert-text:eq(" + n + ")").hide();
-                             var obj=$("#sale-sample-output-text").text('인증성공!!!\n잠시 후 샘플이 나옵니다.');
+                            var obj=$("#sale-sample-output-text").text('인증성공!!!\n잠시 후 샘플이 나옵니다.');
                             obj.html(obj.html().replace(/\n/g,'<br/>'));
                             
                             //전역변수 초기화
